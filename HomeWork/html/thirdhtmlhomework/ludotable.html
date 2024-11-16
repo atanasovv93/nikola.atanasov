@@ -2,42 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludo Board</title>
-    <style>
-        .board {
-            border-collapse: collapse;
-        }
-        .board td {
-            width: 40px;
-            height: 40px;
-            border: 1px solid black;
-            text-align: center;
-        }
-        .red { background-color: red; }
-        .blue { background-color: blue; }
-        .green { background-color: green; }
-        .yellow { background-color: yellow; }
-        .path { background-color: lightblue; }
-        .start { background-color: lightblue; font-weight: bold; }
-        .white { background-color: white; }
-    </style>
 </head>
 <body>
-    <table class="board">
-        <!-- Add your rows and columns here -->
-        <tr>
-            <td class="red"></td>
-            <td class="red"></td>
-            <td class="white"></td>
-            <td class="path"></td>
-            <td class="path start">START</td>
-            <td class="path"></td>
-            <td class="white"></td>
-            <td class="blue"></td>
-            <td class="blue"></td>
-        </tr>
-        <!-- Repeat and adjust rows for the entire board -->
+    <h2>Ludo Game</h2>
+    <table border="1" cellspacing="5" cellpadding="2">
+        <caption></caption>
+        <tbody>
+            <tr bgcolor="">
+                <td style="background-color: blue;"></td>
+                <td style="background-color: blue;"></td>
+                <td rowspan="4" colspan="2"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/ludostartfield.png"></td>
+                <td rowspan="4" colspan="2"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: green;"></td>
+            </tr>
+            <tr bgcolor="">
+                <td style="background-color: blue;"></td>
+                <td style="background-color: blue;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: green;"></td>
+            </tr>
+            <tr bgcolor="">
+                <td rowspan="2" colspan="2"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td rowspan="2" colspan="2"></td>
+
+            </tr>
+            <tr bgcolor="">
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+            </tr>
+            </tr>
+            <tr bgcolor="">
+                <td><img src="../../../../assets/img/ludostartfield.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+            </tr>
+            <tr>
+                <td><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: blue;"></td>
+                <td style="background-color: blue;"></td>
+                <td style="background-color: blue;"></td>
+                <td style="background-color: blue;"></td>
+                <td></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+            </tr>
+            <tr>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/ludostartfield.png"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="2"></td>
+                <td rowspan="4" colspan="2"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td rowspan="4" colspan="2"></td>
+                <td rowspan="2" colspan="2"></td>
+
+            </tr>
+            <tr>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+
+            </tr>
+            <tr>
+                <td style="background-color: red;"></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: yellow;"></td>
+
+            </tr>
+            <tr>
+                <td style="background-color: red;"></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/ludostartfield.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: lightblue;"><img src="../../../../assets/img/fieldsforludogame.png"></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: yellow;"></td>
+            </tr>
+            
+        </tbody>
     </table>
+
+      
 </body>
 </html>
