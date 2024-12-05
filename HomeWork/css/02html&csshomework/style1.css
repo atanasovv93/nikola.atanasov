@@ -1,0 +1,84 @@
+.container{
+    position: relative;
+    margin-left: 70px;
+    margin-top: 20;
+}
+
+.box1{
+    background-color: bisque;
+    position: absolute;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    width: 170px;
+    height: 130px;
+}
+
+.box2{
+    background-color: bisque;
+    position: absolute;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    top: 145px;
+    width: 170px;
+    height: 200px;
+}
+
+.box3{
+    background-color: lightskyblue;
+    position: absolute;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    top: 360px;
+    width: 170px;
+    height: 150px;
+}
+
+.box4{
+    background-color: red;
+    position: absolute;
+    left: 180px;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    width: 500px;
+    height: 345px;
+}
+
+.box5{
+    background-color: bisque;
+    position: absolute;
+    top: 360px;
+    left: 180px;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    width: 470px;
+    height: 150px;
+}
+
+.box6{
+    background-color: bisque;
+    position: absolute;
+    top: 360px;
+    left: 660px;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    width: 20px;
+    height: 70px;
+}
+
+.box7{
+    background-color: yellow;
+    position: absolute;
+    top: 440px;
+    left: 660px;
+    border: 5px solid black;
+    border-right: 10px solid black;
+    border-bottom: 15px solid black;
+    width: 20px;
+    height: 70px;
+}
