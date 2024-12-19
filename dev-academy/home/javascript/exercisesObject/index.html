@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exercise Form</title>
+</head>
+<body>
+    <form id="myForm">
+        <fieldset>
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <label>Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+            <label for="phonenumber">Phone/Office Number</label><br>
+            <input type="text" id="phonenumber" name="phonenumber"><br><br>
+            <label for="country">Country</label><br>
+            <select id="country" name="country" required>
+                <option value="" selected hidden disabled>Please select...</option>
+                <option value="serbia">Serbia</option>
+                <option value="croatia">Croatia</option>
+                <option value="macedonia">Macedonia</option>
+                <option value="montenegro">Montenegro</option>
+                <option value="bulgaria">Bulgaria</option>
+                <option value="greece">Greece</option>
+                <option value="croatia">Croatia</option>
+                <option value="slovenia">Slovenia</option>
+            </select><br><br>
+            <label>Academie</label><br>
+            <input type="checkbox" id="academie" name="academie" value="programming">
+            <label for="programming">Programming Academy</label><br>
+            <input type="checkbox" id="academie" name="academie" value="data-science">
+            <label for="academie">Data Science Academy</label><br>
+            <input type="checkbox" id="academie" name="academie" value="cyber">
+            <label for="academie">Cyber Security Academy</label><br><br>
+            <label for="remark">Remark</label><br>
+            <textarea id="remark" name="remark" rows="4" cols="30"></textarea><br><br>
+        </fieldset>
+        <section style="background-color: lightgrey;">
+            <input type="button" id="subtim" value="Submit">
+            <input type="reset" value="Reset">
+        </section>
+    </form>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="design.css"></body>
+</html>
