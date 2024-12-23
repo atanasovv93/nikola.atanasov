@@ -1,0 +1,110 @@
+/* General Reset */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form Container */
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 30px;
+    color: #333;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels and Inputs */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Gender Options */
+.gender-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Academies Options */
+.academies-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button, input[type="button"], input[type="reset"] {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+button, input[type="button"] {
+    background: #2575fc;
+}
+
+input[type="reset"] {
+    background: #6a11cb;
+}
+
+button:hover, input[type="button"]:hover, input[type="reset"]:hover {
+    background: #1a5bce;
+}
+
+/* Fieldsets */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
