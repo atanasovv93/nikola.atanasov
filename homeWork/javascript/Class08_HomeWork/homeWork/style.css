@@ -28,3 +28,19 @@ button {
 button:hover {
     background-color: rgb(172, 153, 132);
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 50px;
+    margin-right: 10px;
+}

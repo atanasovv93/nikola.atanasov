@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шах за двајца играчи</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 60px);
+            grid-template-rows: repeat(8, 60px);
+            gap: 0;
+            margin: 20px;
+        }
+        .square {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0d9b5;
+        }
+        .square.black {
+            background-color: #b58863;
+        }
+        .piece {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            cursor: pointer;
+        }
+        .message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="board"></div>
+    <div class="message" id="turnMessage">Турн на Белите играчи</div>
+
+    <script>
+        const board = document.getElementById('board');
+        const turnMessage = document.getElementById('turnMessage');
+        
+        // Икони за шах фигурите
+        const pieces = {
+            whitePawn: 'url("https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg")',
+            blackPawn: 'url("https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_pdt45.svg")',
+            whiteRook: 'url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Chess_rlt45.svg")',
+            blackRook: 'url("https://upload.wikimedia.org/wikipedia/commons/2/2f/Chess_rdt45.svg")',
+            whiteKnight: 'url("https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg")',
+            blackKnight: 'url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg")',
+            whiteBishop: 'url("https://upload.wikimedia.org/wikipedia/commons/9/9b/Chess_blt45.svg")',
+            blackBishop: 'url("https://upload.wikimedia.org/wikipedia/commons/8/81/Chess_bdt45.svg")',
+            whiteQueen: 'url("https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qlt45.svg")',
+            blackQueen: 'url("https://upload.wikimedia.org/wikipedia/commons/a/af/Chess_qdt45.svg")',
+            whiteKing: 'url("https://upload.wikimedia.org/wikipedia/commons/2/2f/Chess_klt45.svg")',
+            blackKing: 'url("https://upload.wikimedia.org/wikipedia/commons/4/42/Chess_kdt45.svg")'
+        };
+
+        // Почетна состојба на шах таблата
+        let boardState = [
+            ['blackRook', 'blackKnight', 'blackBishop', 'blackQueen', 'blackKing', 'blackBishop', 'blackKnight', 'blackRook'],
+            ['blackPawn', 'blackPawn', 'blackPawn', 'blackPawn', 'blackPawn', 'blackPawn', 'blackPawn', 'blackPawn'],
+            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+            ['whitePawn', 'whitePawn', 'whitePawn', 'whitePawn', 'whitePawn', 'whitePawn', 'whitePawn', 'whitePawn'],
+            ['whiteRook', 'whiteKnight', 'whiteBishop', 'whiteQueen', 'whiteKing', 'whiteBishop', 'whiteKnight', 'whiteRook']
+        ];
+
+        // Променливи за движење на фигури
+        let selectedPiece = null;
+        let selectedRow = null;
+        let selectedCol = null;
+        let currentPlayer = 'white';  // Започнува белите играчи
+
+        // Цртање на таблата
+        function drawBoard() {
+            board.innerHTML = ''; // Очисти ја таблата
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    const square = document.createElement('div');
+                    square.classList.add('square');
+                    if ((row + col) % 2 === 1) square.classList.add('black');
+
+                    const piece = boardState[row][col];
+                    if (piece !== 'empty') {
+                        const pieceDiv = document.createElement('div');
+                        pieceDiv.classList.add('piece');
+                        pieceDiv.style.backgroundImage = pieces[piece];
+                        pieceDiv.setAttribute('data-row', row);
+                        pieceDiv.setAttribute('data-col', col);
+                        pieceDiv.addEventListener('click', selectPiece);
+                        square.appendChild(pieceDiv);
+                    }
+
+                    board.appendChild(square);
+                }
+            }
+        }
+
+        // Избирање и преместување на фигури
+        function selectPiece(event) {
+            const row = parseInt(event.target.getAttribute('data-row'));
+            const col = parseInt(event.target.getAttribute('data-col'));
+            const piece = boardState[row][col];
+
+            // Проверка дали е ред на твојот играч
+            if ((currentPlayer === 'white' && piece.includes('white')) || (currentPlayer === 'black' && piece.includes('black'))) {
+                // Ако има избрана фигура, обиди се да ја преместиш на нова позиција
+                if (selectedPiece) {
+                    if (isValidMove(selectedPiece, selectedRow, selectedCol, row, col)) {
+                        // Изврши преместување
+                        boardState[row][col] = selectedPiece;
+                        boardState[selectedRow][selectedCol] = 'empty';
+                        drawBoard();
+                        toggleTurn();  // Префрлање на турната
+                        selectedPiece = null;  // Деселектување
+                    }
+                } else {
+                    // Избирање на фигура
+                    selectedPiece = piece;
+                    selectedRow = row;
+                    selectedCol = col;
+                }
+            }
+        }
+
+        // Превртување на играчите
+        function toggleTurn() {
+            currentPlayer = (currentPlayer === 'white') ? 'black' : 'white';
+            turnMessage.textContent = `Турн на ${currentPlayer.charAt(0).toUpperCase() + currentPlayer.slice(1)} играчите`;
+        }
+
+        // Проверка дали движењето е валидно (едноставна логика за пешак)
+        function isValidMove(piece, fromRow, fromCol, toRow, toCol) {
+            if (piece === 'whitePawn' || piece === 'blackPawn') {
+                // Пешакот се движи само по еден квадрат напред
+                const direction = (piece === 'whitePawn') ? 1 : -1;
+                if (fromCol === toCol && (toRow === fromRow + direction)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        drawBoard();
+    </script>
+
+</body>
+</html>
