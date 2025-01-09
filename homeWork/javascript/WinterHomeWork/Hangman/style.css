@@ -85,8 +85,8 @@ body {
   }
   
   button.alphabetButtonJS.selected {
-    background-color: gray; /* Change the background color */
-    color: white;           /* Change the text color */
-    cursor: not-allowed;    /* Show a disabled cursor */
+    background-color: gray; 
+    color: white;           
+    cursor: not-allowed;   
   }
   

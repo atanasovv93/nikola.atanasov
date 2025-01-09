@@ -1,4 +1,3 @@
-// Game variables
 const container = document.getElementById("alphabetButtons");
 var answerDisplay = document.getElementById("hold");
 var answer = "";
@@ -12,9 +11,8 @@ const buttonReset = document.getElementById("reset");
 const livesDisplay = document.getElementById("mylives");
 var myStickman = document.getElementById("stickman");
 var context = myStickman.getContext("2d");
-const guessedLetters = new Set(); // Keep track of guessed letters
+const guessedLetters = new Set(); 
 
-// Generate alphabet buttons
 function generateButton() {
   var buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
     .split("")
@@ -29,7 +27,6 @@ function generateButton() {
   return buttonsHTML;
 }
 
-// Handle button click
 function handleClick(event) {
   const isButton = event.target.nodeName === "BUTTON";
   if (isButton) {
@@ -37,15 +34,14 @@ function handleClick(event) {
     const guessedLetter = button.id;
 
     if (!guessedLetters.has(guessedLetter)) {
-      guessedLetters.add(guessedLetter); // Add to guessed letters
-      button.disabled = true; // Disable the button
+      guessedLetters.add(guessedLetter);
+      button.disabled = true; 
       button.classList.add("selected");
-      guess(guessedLetter); // Process the guess
+      guess(guessedLetter);
     }
   }
 }
 
-// Word array and categories
 const question = [
   "The Chosen Category Is Premier League Football Teams",
   "The Chosen Category Is Films",
@@ -92,7 +88,6 @@ const hints = [
   ]
 ];
 
-// Set answer, hint, and category
 function setAnswer() {
   const categoryOrder = Math.floor(Math.random() * categories.length);
   const chosenCategory = categories[categoryOrder];
@@ -110,15 +105,14 @@ function showHint() {
   containerHint.innerHTML = `Clue - ${hint}`;
 }
 
-// Initial condition setup
 function init() {
   answer = "";
   hint = "";
   life = 6;
   wordDisplay = [];
   winningCheck = "";
-  guessedLetters.clear(); // Clear guessed letters
-  context.clearRect(0, 0, 400, 400); // Clear canvas
+  guessedLetters.clear(); 
+  context.clearRect(0, 0, 400, 400); 
   canvas();
   containerHint.innerHTML = "";
   livesDisplay.innerHTML = `You have ${life} lives!`;
@@ -127,7 +121,6 @@ function init() {
   container.addEventListener("click", handleClick);
 }
 
-// Guess letter
 function guess(guessedLetter) {
   let correctGuess = false;
 
@@ -150,12 +143,10 @@ function guess(guessedLetter) {
   }
 }
 
-// Draw hangman
 function animate() {
   drawArray[6 - life]();
 }
 
-// Hangman drawing functions
 function canvas() {
   context.strokeStyle = "#fff";
   context.lineWidth = 2;
@@ -214,7 +205,6 @@ function leftLeg() {
   draw(60, 70, 20, 100);
 }
 
-// Array of drawing functions
 var drawArray = [
   frame4, // rope
   head,   // head
@@ -225,9 +215,7 @@ var drawArray = [
   rightLeg // right leg
 ];
 
-// Event listeners
 buttonHint.addEventListener("click", showHint);
 buttonReset.addEventListener("click", init);
 
-// Start the game
 window.onload = init;

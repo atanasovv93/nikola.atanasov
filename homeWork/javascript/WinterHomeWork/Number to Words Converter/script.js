@@ -1,4 +1,3 @@
-// Helper arrays for number-to-words conversion
 const singleDigits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 const teenNumbers = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
 const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
@@ -37,17 +36,14 @@ function numberToWords(num) {
     return words.trim();
 }
 
-// Main functionality
 document.getElementById("numberInput").addEventListener("input", function () {
     const input = this.value.trim();
     const errorMessage = document.getElementById("errorMessage");
     const wordOutput = document.getElementById("wordOutput");
 
-    // Clear output and errors
     wordOutput.value = "";
     errorMessage.textContent = "";
 
-    // Validate input
     if (!/^\d+$/.test(input)) {
         if (input !== "") errorMessage.textContent = "Please enter a valid number.";
         return;
@@ -60,7 +56,6 @@ document.getElementById("numberInput").addEventListener("input", function () {
         return;
     }
 
-    // Convert number to words
     if (number === 1000000) {
         wordOutput.value = "one million";
     } else {
