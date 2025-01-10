@@ -20,6 +20,7 @@ function clearAll() {
     operator = null;
     B = null;
     errorDisplay.innerText = "";
+    display.style.fontSize = "40px"; // Reset font size
 }
 
 let fontSize = 40;
@@ -117,7 +118,12 @@ for (let i = 0; i < buttonValues.length; i++) {
                 display.value = value;
             }
             else {
-                display.value += value;
+                // Ограничување на бројот на цифри на 15
+                if (display.value.length < 15) {
+                    display.value += value;
+                } else {
+                    errorDisplay.innerText = "Error: Maximum input length exceeded";
+                }
             }
         }
 
