@@ -11,7 +11,24 @@ const buttonReset = document.getElementById("reset");
 const livesDisplay = document.getElementById("mylives");
 var myStickman = document.getElementById("stickman");
 var context = myStickman.getContext("2d");
-const guessedLetters = new Set(); 
+const guessedLetters = new Set();
+
+// Function to disable all alphabet buttons
+function disableButtons() {
+  const buttons = document.querySelectorAll(".alphabetButtonJS");
+  buttons.forEach(button => {
+    button.disabled = true;
+  });
+}
+
+// Function to enable all alphabet buttons
+function enableButtons() {
+  const buttons = document.querySelectorAll(".alphabetButtonJS");
+  buttons.forEach(button => {
+    button.disabled = false;
+    button.classList.remove("selected");
+  });
+}
 
 function generateButton() {
   var buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
@@ -58,8 +75,20 @@ const categories = [
     "manchester-city",
     "newcastle-united"
   ],
-  ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
-  ["manchester", "milan", "madrid", "amsterdam", "prague"]
+  [
+    "alien", 
+    "dirty-harry", 
+    "gladiator", 
+    "finding-nemo", 
+    "jaws"
+  ],
+  [
+    "manchester", 
+    "milan", 
+    "madrid", 
+    "amsterdam", 
+    "prague"
+  ]
 ];
 
 const hints = [
@@ -112,13 +141,15 @@ function init() {
   wordDisplay = [];
   winningCheck = "";
   guessedLetters.clear(); 
-  context.clearRect(0, 0, 400, 400); 
+  context.clearRect(0, 0, myStickman.width, myStickman.height); 
+  context.beginPath();
   canvas();
   containerHint.innerHTML = "";
   livesDisplay.innerHTML = `You have ${life} lives!`;
   setAnswer();
   container.innerHTML = generateButton();
   container.addEventListener("click", handleClick);
+  enableButtons(); // Enable the buttons at the start of a new game
 }
 
 function guess(guessedLetter) {
@@ -135,11 +166,16 @@ function guess(guessedLetter) {
     answerDisplay.innerHTML = wordDisplay.join(" ");
     if (wordDisplay.join("") === answer) {
       livesDisplay.innerHTML = "YOU WIN!";
+      disableButtons(); // Disable buttons when the game is won
     }
   } else {
     life--;
     livesDisplay.innerHTML = life > 1 ? `You have ${life} lives!` : life === 1 ? `You have 1 life!` : `GAME OVER! The word was: ${answer}`;
     animate();
+
+    if (life === 0) {
+      disableButtons(); // Disable buttons when the game is lost
+    }
   }
 }
 
