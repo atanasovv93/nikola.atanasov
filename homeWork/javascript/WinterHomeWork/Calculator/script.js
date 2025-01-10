@@ -118,7 +118,6 @@ for (let i = 0; i < buttonValues.length; i++) {
                 display.value = value;
             }
             else {
-                // Ограничување на бројот на цифри на 15
                 if (display.value.length < 15) {
                     display.value += value;
                 } else {
