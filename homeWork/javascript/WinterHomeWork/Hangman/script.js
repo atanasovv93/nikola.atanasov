@@ -1,16 +1,16 @@
 const container = document.getElementById("alphabetButtons");
-var answerDisplay = document.getElementById("hold");
-var answer = "";
-var hint = "";
-var life = 6;
-var wordDisplay = [];
-var winningCheck = "";
+let answerDisplay = document.getElementById("hold");
+let answer = "";
+let hint = "";
+let life = 6;
+let wordDisplay = [];
+let winningCheck = "";
 const containerHint = document.getElementById("clue");
 const buttonHint = document.getElementById("hint");
 const buttonReset = document.getElementById("reset");
 const livesDisplay = document.getElementById("mylives");
-var myStickman = document.getElementById("stickman");
-var context = myStickman.getContext("2d");
+let myStickman = document.getElementById("stickman");
+let context = myStickman.getContext("2d");
 const guessedLetters = new Set();
 
 // Function to disable all alphabet buttons
@@ -31,7 +31,7 @@ function enableButtons() {
 }
 
 function generateButton() {
-  var buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
+  let buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
     .split("")
     .map(
       (letter) =>
@@ -241,7 +241,7 @@ function leftLeg() {
   draw(60, 70, 20, 100);
 }
 
-var drawArray = [
+let drawArray = [
   frame4, // rope
   head,   // head
   torso,  // torso

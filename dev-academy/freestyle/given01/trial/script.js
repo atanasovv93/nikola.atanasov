@@ -1,41 +1,85 @@
-// Warehouse Management Logic
-const form = document.getElementById('product-form');
-const tableBody = document.querySelector('#warehouse-table tbody');
+const form = document.getElementById("product-form");
+const productTable = document.getElementById("product-table").getElementsByTagName("tbody")[0];
+const productFormContainer = document.querySelector(".form-container");
+const editFormContainer = document.querySelector(".edit-form-container");
 
-// Event listener for form submission
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+// Додадени продукти
+let products = [];
 
-    // Get values from the form
-    const productName = document.getElementById('product-name').value;
-    const quantity = parseInt(document.getElementById('quantity').value, 10);
-    const entryDate = document.getElementById('entry-date').value;
-    const expiryDate = document.getElementById('expiry-date').value;
-
-    // Add product to the table
-    addProductToTable(productName, quantity, entryDate, expiryDate);
-
-    // Clear form fields
-    form.reset();
+// Функција за додавање на продукт
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const product = Object.fromEntries(formData);
+  products.push(product);
+  renderTable();
+  form.reset();
 });
 
-// Function to add product to the table
-function addProductToTable(name, quantity, entryDate, expiryDate) {
-    const row = document.createElement('tr');
-
+// Функција за рендерирање на табелата
+function renderTable() {
+  productTable.innerHTML = "";
+  products.forEach((product, index) => {
+    const row = document.createElement("tr");
     row.innerHTML = `
-        <td>${name}</td>
-        <td>${quantity}</td>
-        <td>${entryDate}</td>
-        <td>${expiryDate}</td>
-        <td><button class="delete-btn">Delete</button></td>
+      <td>${product.name}</td>
+      <td>${product.category}</td>
+      <td>${product.quantity}</td>
+      <td>${product.distributor}</td>
+      <td>${product.entryDate}</td>
+      <td>${product.expirationDate}</td>
+      <td>
+        <button class="edit-btn" onclick="editProduct(${index})">Edit</button>
+        <button class="delete-btn" onclick="deleteProduct(${index})">Delete</button>
+      </td>
     `;
+    productTable.appendChild(row);
+  });
+}
 
-    // Append the row to the table body
-    tableBody.appendChild(row);
+// Функција за уредување на продукт
+function editProduct(index) {
+  const product = products[index];
+  editFormContainer.innerHTML = `
+    <form id="edit-product-form">
+      <h2>Edit Product</h2>
+      <label for="edit-name">Name</label>
+      <input type="text" id="edit-name" name="name" value="${product.name}" required>
+      <label for="edit-category">Category</label>
+      <input type="text" id="edit-category" name="category" value="${product.category}" required>
+      <label for="edit-quantity">Quantity</label>
+      <input type="number" id="edit-quantity" name="quantity" value="${product.quantity}" required>
+      <label for="edit-distributor">Distributor</label>
+      <input type="text" id="edit-distributor" name="distributor" value="${product.distributor}" required>
+      <label for="edit-entryDate">Entry Date</label>
+      <input type="date" id="edit-entryDate" name="entryDate" value="${product.entryDate}" required>
+      <label for="edit-expirationDate">Expiration Date</label>
+      <input type="date" id="edit-expirationDate" name="expirationDate" value="${product.expirationDate}" required>
+      <button type="submit">Save</button>
+      <button type="button" onclick="cancelEdit()">Cancel</button>
+    </form>
+  `;
+  editFormContainer.classList.remove("hidden");
 
-    // Add event listener for delete button
-    row.querySelector('.delete-btn').addEventListener('click', () => {
-        row.remove();
-    });
+  const editForm = document.getElementById("edit-product-form");
+  editForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const updatedData = new FormData(editForm);
+    products[index] = Object.fromEntries(updatedData);
+    renderTable();
+    editFormContainer.innerHTML = "";
+    editFormContainer.classList.add("hidden");
+  });
+}
+
+// Функција за откажување на уредувањето
+function cancelEdit() {
+  editFormContainer.innerHTML = "";
+  editFormContainer.classList.add("hidden");
+}
+
+// Функција за бришење на продукт
+function deleteProduct(index) {
+  products.splice(index, 1);
+  renderTable();
 }

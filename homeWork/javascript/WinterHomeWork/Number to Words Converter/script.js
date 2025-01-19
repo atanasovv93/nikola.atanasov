@@ -51,11 +51,7 @@ document.getElementById("numberInput").addEventListener("input", function () {
 
     const number = parseInt(input, 10);
 
-    if (number < 0 || number > 1000000) {
-        errorMessage.textContent = "Number out of range (0 - 1,000,000).";
-        return;
-    }
-
+    
     if (number === 1000000) {
         wordOutput.value = "one million";
     } else {
