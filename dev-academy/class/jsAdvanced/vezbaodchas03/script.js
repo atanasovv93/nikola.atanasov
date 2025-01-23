@@ -11,7 +11,7 @@ const changeTextColor = (element, color = "black") => {
     const textSizeInput = document.getElementById("textSizeInput").value;
     const colorInput = document.getElementById("colorInput").value;
   
-    changeTextSize(header, textSizeInput || undefined); 
-    changeTextColor(header, colorInput || undefined);
+    changeTextSize(header, textSizeInput); 
+    changeTextColor(header, colorInput);
   });
   
