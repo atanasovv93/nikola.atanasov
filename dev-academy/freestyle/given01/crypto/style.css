@@ -42,7 +42,7 @@ h2 {
 }
 
 .converter input[type="number"] {
-  width: 120px;
+  width: 130px;
   padding: 8px;
   font-size: 1em;
   border: 1px solid #ccc;
@@ -50,6 +50,7 @@ h2 {
 }
 
 .converter select {
+  width: 130px;
   padding: 8px;
   font-size: 1em;
   border: 1px solid #ccc;
@@ -151,5 +152,15 @@ table tbody tr:hover {
   .crypto-box {
     width: 100%;
   }
+}
+
+#last-updated {
+  text-align: right;
+}
+
+#update-time {
+  font-size: 1em;
+  color: #999;
+  border: dotted  1px black;
 }
 

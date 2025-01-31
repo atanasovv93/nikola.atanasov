@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f0f0;
+
+}
+
+#matches-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 2fr));
+  gap: 10px;
+}
+
+.match {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.match h2 {
+  margin: 0 0 10px;
+}
+
+.match p {
+  margin: 5px 0;
+}
+
+.match img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.match .teams {
+  display: flex;
+  align-items: center;
+}
+
+.match {
+  padding-top: 10px;
+  font-size: 1em;
+  text-align: center;
+  align-content: center;
+  gap: 10px;
+  margin: 10px;
+
+}
+
+.teams {
+  justify-content: center;
+  top: 10px;
+  font-size: 1.5em;
+  text-size-adjust: 1em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.watchlive  {
+  margin-top: 40px;
+  border: dotted 1px black;
+  border-radius: 20px;
+  border-width: 4px;
+  width: 180px;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+.vs {
+  margin: 0 10px; 
+}
+
+h1 {
+  text-align: center;
+}

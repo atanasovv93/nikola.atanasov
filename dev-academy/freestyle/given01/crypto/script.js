@@ -8,23 +8,23 @@ const toCurrency = document.getElementById('to-currency');
 // API линкови
 const apis = {
   crypto: [
-    { name: 'BTC', url: 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR' },
-    { name: 'XRP', url: 'https://min-api.cryptocompare.com/data/price?fsym=XRP&tsyms=EUR' },
-    { name: 'ADA', url: 'https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=EUR' },
-    { name: 'SOL', url: 'https://min-api.cryptocompare.com/data/price?fsym=SOL&tsyms=EUR' },
-    { name: 'ETH', url: 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=EUR' },
-    { name: 'VET', url: 'https://min-api.cryptocompare.com/data/price?fsym=VET&tsyms=EUR' },
-    { name: 'DOT', url: 'https://min-api.cryptocompare.com/data/price?fsym=DOT&tsyms=EUR' },
-    { name: 'LINK', url: 'https://min-api.cryptocompare.com/data/price?fsym=LINK&tsyms=EUR' },
-    { name: 'THETA', url: 'https://min-api.cryptocompare.com/data/price?fsym=THETA&tsyms=EUR' },
-    { name: 'BNB', url: 'https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=EUR' },
-    { name: 'DOGE', url: 'https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=EUR' },
-    { name: 'ATOM', url: 'https://min-api.cryptocompare.com/data/price?fsym=ATOM&tsyms=EUR' },
-    { name: 'ICP', url: 'https://min-api.cryptocompare.com/data/price?fsym=ICP&tsyms=EUR' },
-    { name: 'FIL', url: 'https://min-api.cryptocompare.com/data/price?fsym=FIL&tsyms=EUR' },
-    { name: 'TRX', url: 'https://min-api.cryptocompare.com/data/price?fsym=TRX&tsyms=EUR' },    
-    { name: 'PEPE', url: 'https://min-api.cryptocompare.com/data/price?fsym=PEPE&tsyms=EUR' },
-    { name: 'AXS', url: 'https://min-api.cryptocompare.com/data/price?fsym=AXS&tsyms=EUR' }
+      { name: 'BTC', url: 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR' },
+      { name: 'XRP', url: 'https://min-api.cryptocompare.com/data/price?fsym=XRP&tsyms=EUR' },
+      { name: 'ADA', url: 'https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=EUR' },
+      { name: 'SOL', url: 'https://min-api.cryptocompare.com/data/price?fsym=SOL&tsyms=EUR' },
+      { name: 'ETH', url: 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=EUR' },
+      { name: 'VET', url: 'https://min-api.cryptocompare.com/data/price?fsym=VET&tsyms=EUR' },
+      { name: 'DOT', url: 'https://min-api.cryptocompare.com/data/price?fsym=DOT&tsyms=EUR' },
+      { name: 'LINK', url: 'https://min-api.cryptocompare.com/data/price?fsym=LINK&tsyms=EUR' },
+      { name: 'THETA', url: 'https://min-api.cryptocompare.com/data/price?fsym=THETA&tsyms=EUR' },
+      { name: 'BNB', url: 'https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=EUR' },
+      { name: 'DOGE', url: 'https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=EUR' },
+      { name: 'ATOM', url: 'https://min-api.cryptocompare.com/data/price?fsym=ATOM&tsyms=EUR' },
+      { name: 'ICP', url: 'https://min-api.cryptocompare.com/data/price?fsym=ICP&tsyms=EUR' },
+      { name: 'FIL', url: 'https://min-api.cryptocompare.com/data/price?fsym=FIL&tsyms=EUR' },
+      { name: 'TRX', url: 'https://min-api.cryptocompare.com/data/price?fsym=TRX&tsyms=EUR' },    
+      { name: 'PEPE', url: 'https://min-api.cryptocompare.com/data/price?fsym=PEPE&tsyms=EUR' },
+      { name: 'AXS', url: 'https://min-api.cryptocompare.com/data/price?fsym=AXS&tsyms=EUR' }
   ],
   forex: 'https://v6.exchangerate-api.com/v6/73e17080b39b54fbc6f83e7b/latest/MKD'
 };
@@ -106,8 +106,13 @@ function addCryptoToTable(name, rate) {
   }
 }
 
+function updateLastUpdatedTime() {
+  const updateTime = document.getElementById('update-time');
+  const now = new Date();
+  const formattedTime = now.toLocaleString('mk-MK', { timeZone: 'CET' });
+  updateTime.textContent = formattedTime;
 
-
+}
 
 function addForexToTable() {
   const selectedCurrencies = ['EUR', 'CHF', 'GBP', 'USD', 'CAD', 'AUD', 'CNY', 'JPY', 'RUB', 'RSD', 'ALL'];
@@ -139,6 +144,8 @@ function getCurrencyName(currency) {
   return names[currency] || currency;
 }
 
+updateLastUpdatedTime();
+
 // Конверзија
 convertButton.addEventListener('click', () => {
   const amount = parseFloat(document.getElementById('amount').value);
@@ -156,3 +163,5 @@ convertButton.addEventListener('click', () => {
 
 // Стартување
 fetchForexRates();
+
+
