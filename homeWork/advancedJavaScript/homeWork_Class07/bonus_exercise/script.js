@@ -1,6 +1,9 @@
 // Листа на корисници (моментално содржи еден тест-корисник)
 const users = [
-    { id: 1, email: 'test@example.com', firstname: 'John', lastname: 'Doe', password: '1234' }
+    { id: 1, email: 'test1@example.com', firstname: 'John', lastname: 'Doe', password: '1234' },
+    { id: 2, email: 'test2@example.com', firstname: 'Jane', lastname: 'Doe', password: '4321' },
+    { id: 3, email: 'test3@example.com', firstname: 'Alice', lastname: 'Smith', password: 'abcd' },
+    { id: 4, email: 'test4@example.com', firstname: 'Bob', lastname: 'Johnson', password: '9876' }
 ];
 
 // Додавање на event listener за копчето "Login"

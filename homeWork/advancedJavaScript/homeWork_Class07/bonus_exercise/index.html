@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button id="login-button">Login</button>
+        <p id="login-message" class="message"></p>
+        <p><a href="#" id="register-link">Don't have an account? Register Here</a></p>
+    </div>
+
+    <div class="container hidden" id="register-container">
+        <h2>Register</h2>
+        <input type="text" id="firstname" placeholder="First Name"><br>
+        <input type="text" id="lastname" placeholder="Last Name"><br>
+        <input type="email" id="register-email" placeholder="Email"><br>
+        <input type="password" id="register-password" placeholder="Password"><br>
+        <button id="register-button">Register</button>
+        <p id="register-message" class="message"></p>
+    </div>
+
+    <div class="container hidden" id="welcome-container">
+        <h2 id="welcome-message"></h2>
+        <button id="logout-button">Logout</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>
+  
