@@ -1,98 +1,94 @@
-// Основен конструктор за институции (основа за Academy)
+// Exercise 2: Base Constructors (Institution, Course, Person)
 function Institution(location, capacity) {
     this.id = Math.floor(Math.random() * 1000000);
     this.location = location;
     this.capacity = capacity;
-    
-    if (this.capacity < 1) {
-        throw new Error("Капацитетот мора да биде најмалку 1.");
-    }
+
+    this.validateCapacity = function() {
+        if (this.capacity < 1) throw new Error("Capacity must be at least 1");
+    };
+    this.validateCapacity();
 }
 
-// Основен конструктор за курсеви (основа за Subject)
 function Course(description, price) {
     this.id = Math.floor(Math.random() * 1000000);
     this.description = description;
     this.price = price;
-    
-    if (this.price < 0) {
-        throw new Error("Цената не може да биде негативна.");
-    }
+
+    this.validatePrice = function() {
+        if (this.price < 0) throw new Error("Price cannot be negative");
+    };
+    this.validatePrice();
 }
 
-// Основен конструктор за лица (основа за Student)
 function Person(email, phone) {
     this.id = Math.floor(Math.random() * 1000000);
     this.email = email;
     this.phone = phone;
-    
-    if (!this.email.includes("@")) {
-        throw new Error("Invalid email address.");
-    }
+
+    this.validateEmail = function() {
+        if (!this.email.includes("@")) throw new Error("Invalid email address");
+    };
+    this.validateEmail();
 }
 
-// Академија: наследува својства од Institution преку создавање на објект и копирање на својствата
+// Exercise 1: Object Templates (Academy, Subject, Student)
 function Academy(name, start, end, location, capacity) {
-    var inst = new Institution(location, capacity);
-    this.id = inst.id;
-    this.location = inst.location;
-    this.capacity = inst.capacity;
-    
+    Institution.call(this, location, capacity);
     this.name = name;
-    this.students = [];
-    this.subjects = [];
     this.start = start;
     this.end = end;
+    this.students = [];
+    this.subjects = [];
 }
 
-// Додавање на методи на prototype на Академија
-Academy.prototype.getNumberOfClasses = function () {
-    return this.subjects.length * 10;
-};
+Academy.prototype = Object.create(Institution.prototype);
+Academy.prototype.constructor = Academy;
 
-Academy.prototype.printStudents = function () {
-    console.log("Студенти во академијата:");
-    for (var i = 0; i < this.students.length; i++) {
-        console.log(this.students[i].firstName + " " + this.students[i].lastName);
+Object.defineProperty(Academy.prototype, 'numberOfClasses', {
+    get: function() {
+        return this.subjects.length * 10;
     }
+});
+
+Academy.prototype.printStudents = function() {
+    console.log("Students in academy:");
+    this.students.forEach(student => {
+        console.log(`${student.firstName} ${student.lastName}`);
+    });
 };
 
-Academy.prototype.printSubjects = function () {
-    console.log("Предмети во академијата:");
-    for (var i = 0; i < this.subjects.length; i++) {
-        console.log(this.subjects[i].title);
-    }
+Academy.prototype.printSubjects = function() {
+    console.log("Subjects in academy:");
+    this.subjects.forEach(subject => {
+        console.log(subject.title);
+    });
 };
 
-// Предмет: наследува својства од Course преку создавање на објект и копирање на својствата
+// Subject inherits from Course
 function Subject(title, isElective, academy, description, price) {
-    var course = new Course(description, price);
-    this.id = course.id;
-    this.description = course.description;
-    this.price = course.price;
-    
+    Course.call(this, description, price);
     this.title = title;
-    this.numberOfClasses = 10; // Стандардна вредност е 10\n";
+    this.numberOfClasses = 10;
     this.isElective = isElective;
     this.academy = academy;
     this.students = [];
 }
 
-Subject.prototype.overrideClasses = function (number) {
+Subject.prototype = Object.create(Course.prototype);
+Subject.prototype.constructor = Subject;
+
+Subject.prototype.overrideClasses = function(number) {
     if (number < 3) {
-        console.error("Number of classes canno't be < 3.");
-    } else {
-        this.numberOfClasses = number;
+        console.error("Number of classes cannot be less than 3");
+        return;
     }
+    this.numberOfClasses = number;
 };
 
-// Студент: наследува својства од Person преку создавање на објект и копирање на својствата
+// Student inherits from Person
 function Student(firstName, lastName, age, email, phone) {
-    var person = new Person(email, phone);
-    this.id = person.id;
-    this.email = person.email;
-    this.phone = person.phone;
-    
+    Person.call(this, email, phone);
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
@@ -101,48 +97,85 @@ function Student(firstName, lastName, age, email, phone) {
     this.currentSubject = null;
 }
 
-Student.prototype.startAcademy = function (academy) {
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype.startAcademy = function(academy) {
     this.academy = academy;
     academy.students.push(this);
 };
 
-Student.prototype.startSubject = function (subject) {
+Student.prototype.startSubject = function(subject) {
     if (!this.academy) {
-        console.error("Студентот не е запишан во академија.");
+        console.error("Student is not enrolled in an academy");
         return;
     }
-    // Проверка дали предметот постои во академијата (едноставна проверка)\n    var subjectExists = false;\n    for (var i = 0; i < this.academy.subjects.length; i++) {\n        if (this.academy.subjects[i] === subject) {\n            subjectExists = true;\n            break;\n        }\n    }\n    if (!subjectExists) {\n        console.error("Предметот не постои во академијата.");\n        return;\n    }\n    this.currentSubject = subject;\n    subject.students.push(this);\n};
+    if (!this.academy.subjects.includes(subject)) {
+        console.error("Subject does not exist in the academy");
+        return;
+    }
+    this.currentSubject = subject;
+    subject.students.push(this);
+};
 
-// Тестирање на кодот
+// Test the implementation
+try {
+    const codeAcademy = new Academy(
+        "Code Academy",
+        new Date(2023, 9, 1),
+        new Date(2024, 5, 30),
+        "Skopje",
+        100
+    );
 
-// Креирање на академија
-var myAcademy = new Academy("Code Academy", new Date(2023, 9, 1), new Date(2024, 5, 30), "Скопје", 100);
+    const jsSubject = new Subject(
+        "JavaScript Basics",
+        false,
+        codeAcademy,
+        "Learn JavaScript fundamentals",
+        200
+    );
+    const reactSubject = new Subject(
+        "Advanced React",
+        true,
+        codeAcademy,
+        "React with TypeScript",
+        300
+    );
+    codeAcademy.subjects.push(jsSubject, reactSubject);
 
-// Креирање на предмети
-var subject1 = new Subject("JavaScript", false, myAcademy, "Основи на JavaScript", 200);
-var subject2 = new Subject("React", true, myAcademy, "Напреден React", 300);
-myAcademy.subjects.push(subject1, subject2);
+    const student1 = new Student(
+        "John",
+        "Doe",
+        25,
+        "john.doe@example.com",
+        "123-456-7890"
+    );
+    const student2 = new Student(
+        "Jane",
+        "Smith",
+        22,
+        "jane.smith@example.com",
+        "098-765-4321"
+    );
 
-// Креирање на студенти
-var student1 = new Student("Иван", "Петровски", 25, "ivan.petrov@gmail.com", "070123456");
-var student2 = new Student("Марија", "Илиевска", 22, "marija.ilieva@gmail.com", "071987654");
+    student1.startAcademy(codeAcademy);
+    student2.startAcademy(codeAcademy);
 
-// Запишување на студентите во академијата
-student1.startAcademy(myAcademy);
-student2.startAcademy(myAcademy);
+    student1.startSubject(jsSubject);
+    student2.startSubject(reactSubject);
 
-// Запишување на студенти во предмети
-student1.startSubject(subject1);
-student2.startSubject(subject2);
+    console.log("Academy details:", codeAcademy);
+    codeAcademy.printStudents();
+    codeAcademy.printSubjects();
+    console.log("Number of classes:", codeAcademy.numberOfClasses);
 
-// Прикажување на резултатите
-console.log("Академија детали:", myAcademy);
-myAcademy.printStudents();
-myAcademy.printSubjects();
+    console.log("Student 1:", student1);
+    console.log("Student 2:", student2);
 
-console.log("Студент 1 детали:", student1);
-console.log("Студент 2 детали:", student2);
+    console.log("JavaScript Subject:", jsSubject);
+    console.log("React Subject:", reactSubject);
 
-console.log("Предмет 1 детали:", subject1);
-console.log("Предмет 2 детали:", subject2);
+} catch (error) {
+    console.error("Error:", error.message);
 }
