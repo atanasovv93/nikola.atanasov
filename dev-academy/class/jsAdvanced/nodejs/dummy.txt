@@ -1,0 +1,3 @@
+Hello, I just re-write a second a file using Node.js!
+This is appended content!
+NodeJS is awesome!

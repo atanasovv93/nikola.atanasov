@@ -1,8 +1,9 @@
 export function initializeUsers() {
     if (!localStorage.getItem("users")) {
         const defaultUsers = [
-            { firstname: "Frank", lastname: "Lampard", email: "cfc_legend@cfc.com", password: "london" },
-            { firstname: "Ashley", lastname: "Cole", email: "a.cole@cfc.com", password: "rightfoot" }
+            { firstname: "Frank", lastname: "Lampard", email: "cfc_legend@cfc.com", password: "legend" },
+            { firstname: "Ashley", lastname: "Cole", email: "a.cole@cfc.com", password: "legend" },
+            { firstname: "Didier", lastname: "Drogba", email: "didier@cfc.com", password: "legend" }
         ];
         localStorage.setItem("users", JSON.stringify(defaultUsers));
     }
@@ -25,5 +26,5 @@ export function getLoggedInUser() {
 }
 
 export function logoutUser() {
-    localStorage.removeItem("loggedUser");
+    localStorage.removeItem("loggedUser");z
 }
