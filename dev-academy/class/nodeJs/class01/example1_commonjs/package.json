@@ -1,0 +1,16 @@
+{
+    "name": "class01",
+    "version": "1.0.0",
+    "type": "commonjs",
+    "description": "First class of NodeJS",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "Dev Academy",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    }   
+}

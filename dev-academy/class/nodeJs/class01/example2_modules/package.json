@@ -1,0 +1,15 @@
+{
+    
+    "name": "example2_modules",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A sample project to demonstrate module usage in Node.js",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "",
+    "license": "ISC"
+
+	}
