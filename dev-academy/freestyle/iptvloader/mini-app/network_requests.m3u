@@ -1,0 +1,80 @@
+#EXTM3U
+
+#EXTINF:0 type="stream" channelId="1" group="Movies", HBO 1
+https://p11.magicplaces.eu/hbohd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=dbd67f53766eebe75e8d802744128811125bde77-e1339f0ae28616c3aca382b67bd30c01-1742080183-1742069383
+#EXTINF:0 type="stream" channelId="2" group="Movies", HBO 2
+https://p11.magicplaces.eu/hbo2sd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=b93394df9bd8ee34fd0422f76a2d4d51fb257f8c-70adb707997660c1e803008f4a08d41b-1742080198-1742069398
+#EXTINF:0 type="stream" channelId="3" group="Movies", HBO 3
+https://p11.magicplaces.eu/hbo3sd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=7c528289cf33e8a227c26e8d96681e0a7f9a76b4-24cdacdc74bd6bfbac619861699fcfd2-1742080214-1742069414
+#EXTINF:0 type="stream" channelId="4" group="Movies", SkyShowTime 1
+https://p11.magicplaces.eu/SkyShowTime/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=0f04f8d1ac3078269a0fb2c81d149b0a677aa9a8-bb63d1b2f7e83c081a6635fb48bb7e21-1742080230-1742069430
+#EXTINF:0 type="stream" channelId="5" group="Movies", SkyShowTime 2
+https://p11.magicplaces.eu/skyshowtime2hd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=a929ef54d00951edad044a5c8df848311f875a08-c3b9825b5761cb4267c0879a087538cd-1742080246-1742069446
+#EXTINF:0 type="stream" channelId="6" group="Movies", Cinemax 1
+https://p11.magicplaces.eu/cinemaxhd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=0efdaf326195fcf963163db93493ae7f4435a8e5-56b1d6327920f3d68036fb361067fb5d-1742080261-1742069461
+#EXTINF:0 type="stream" channelId="7" group="Movies", Cinemax 2
+https://p11.magicplaces.eu/cinemax2sd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=be2018f7d3a4270b786f184853e619c610f6a0e3-5cf2ffb50e797179c188b8857d71f5c6-1742080277-1742069477
+#EXTINF:0 type="stream" channelId="8" group="Movies", BBC First
+https://p11.magicplaces.eu/bbcfirsthd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=8c9b6347b4c06bf509df33b8b13182344e95fc45-79b5a62e12c24d43b5b11e01ed5df191-1742080293-1742069493
+#EXTINF:0 type="stream" channelId="9" group="Movies", AMC
+https://p11.magicplaces.eu/amcsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=7a0e5493e45e7ba184675bf7d02a4b2a262d62d0-a1b3ff848a5cad27e3f59df1ccd1a1c7-1742080309-1742069509
+#EXTINF:0 type="stream" channelId="10" group="Movies", FilmNow
+https://p11.magicplaces.eu/diva/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=65a668adefd41048f3cc942812f19458479fa4ab-7233c24def169e158fc8b6cf5c7d96e2-1742080340-1742069540
+#EXTINF:0 type="stream" channelId="11" group="Movies", DIVA
+https://p11.magicplaces.eu/tv1000/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=c1eecbb197b4ba5b772b99ed748ac0e1704936cd-37d84c268d40fe4c4174d5fcfbb77ce0-1742080387-1742069587
+#EXTINF:0 type="stream" channelId="12" group="Movies", FilmBox
+https://p11.magicplaces.eu/axnsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=b10641f8536b4d63c474cb0e58a281accab9fa58-ad53bb849ae8306a59303e8e13e74dd4-1742080403-1742069603
+#EXTINF:0 type="stream" channelId="13" group="Movies", Filmbox Premium
+https://p11.magicplaces.eu/axnwhite/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=75c80c759b308e2410853d9c7a287c07f0da899a-3862e978ce9b34dbe9a532c164598d98-1742080419-1742069619
+#EXTINF:0 type="stream" channelId="14" group="Movies", TV1000
+https://p11.magicplaces.eu/axnblack/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=633bc6aa1624c0abe0aee45211d8535b659a825a-f18db846cd3bf2d4127f749bf6fab150-1742080435-1742069635
+#EXTINF:0 type="stream" channelId="15" group="Movies", AXN
+https://p11.magicplaces.eu/axnspin/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=b74ce7ad8e111d096f98bc35931c6b3680aefd84-58ec74bf5c8744ea9f38c433f76176ce-1742080450-1742069650
+#EXTINF:0 type="stream" channelId="16" group="Movies", AXN White
+https://p11.magicplaces.eu/epicdramasd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=2b5ecc999d1b0413d143989f403321243cba0174-e871bf8a2175038bd6f4d0a92af0a1ac-1742080466-1742069666
+#EXTINF:0 type="stream" channelId="17" group="Movies", AXN Black
+https://p11.magicplaces.eu/comedycentralsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=40b322e4eeab015a0fe0d9b6a9da301448f82767-1a912f3d6c304450ef187b7574b79e01-1742080482-1742069682
+#EXTINF:0 type="stream" channelId="18" group="Movies", AXN Spin
+https://p11.magicplaces.eu/procinemasd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=b16fde4f72c5ff67d26c3bebe3459b319e0289fe-c4769c03288a5b81de78a6a1bf650443-1742080498-1742069698
+#EXTINF:0 type="stream" channelId="19" group="Movies", Epic Drama
+https://p11.magicplaces.eu/cinemaratonsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=a8c3899a624e22d76b212cf751999b5f414be51e-abac8f48596627659c348ee208daf973-1742080513-1742069713
+#EXTINF:0 type="stream" channelId="20" group="Movies", Comedy Central
+https://p11.magicplaces.eu/bollywoodtv/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=ec012a4ebe0ca02f311a5c22ca9ce011c809e92c-fae1c4e68dec8691c1d9fedea1e12b74-1742080529-1742069729
+#EXTINF:0 type="stream" channelId="21" group="Movies", Pro Cinema
+https://p11.magicplaces.eu/bollywoodclasichd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=f46ac2b3675a5d7cc7a904a7e18fa254a4b6b969-05f1d9a3458f2b8eab62bcba819810e1-1742080545-1742069745
+#EXTINF:0 type="stream" channelId="22" group="Movies", Cinemaraton
+https://p11.magicplaces.eu/warner/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=99d3015391ea54da17eb723692c1ec60574f7eb1-44048570b9070381b71f70c2c990377f-1742080561-1742069761
+#EXTINF:0 type="stream" channelId="23" group="Movies", BollyWood TV
+https://p11.magicplaces.eu/primacomedysd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=12dea35aa61b265dedfe1449c161c47ce8040c86-e50c7ffd682f7a212bda37f79e031e91-1742080576-1742069776
+#EXTINF:0 type="stream" channelId="24" group="Movies", BollyWood Classic
+https://p11.magicplaces.eu/filmcafesd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=ae8647dfab7bfa5cd0ce183cb91f11ca4e3105b6-8df034e1aa449efa615bb7a5c043f352-1742080592-1742069792
+#EXTINF:0 type="stream" channelId="25" group="Movies", Warner TV
+https://p11.magicplaces.eu/tvrsport/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=c793f1300d8fc18b10c0e4274f9799d26bccb28f-c756999300c3eb0b5e8fcd2920c08cb9-1742080718-1742069918
+#EXTINF:0 type="stream" channelId="26" group="Movies", Prima Comedy
+https://p11.magicplaces.eu/sportextrahd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=1120cec2fedcc3177270aa46cd78572af1a4176e-c2624a66ae56e5e079be5d783d9687a1-1742080734-1742069934
+#EXTINF:0 type="stream" channelId="27" group="Movies", Film-Café
+https://p11.magicplaces.eu/eurosportsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=36a896cdf29a61531fa646fd30798e4b2d126271-8c1cf6ac747c4d7dbe98356e585d0d22-1742080750-1742069950
+#EXTINF:0 type="stream" channelId="28" group="Sports", PrimarSport 1
+https://p11.magicplaces.eu/eurosport2sd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=6638b9b1d7b4dd8cc6fb44a4fa0dc1103b1772bc-ef2543869bdb8df4575d60d5a872a29c-1742080765-1742069965
+#EXTINF:0 type="stream" channelId="29" group="Sports", PrimarSport 2
+https://p11.magicplaces.eu/proarenahd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=8ee7dcb0dfe455ec559de4b005aaadfebf1ab6be-126615aa7a69996e0be62460073b4636-1742080781-1742069981
+#EXTINF:0 type="stream" channelId="30" group="Sports", PrimarSport 3
+https://p11.magicplaces.eu/atomictvsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=c131a506d0dc15f35930a6ebe701f8183de69fb5-fd69c86069b6f27776756cf2f470f539-1742080813-1742070013
+#EXTINF:0 type="stream" channelId="31" group="Sports", DigiSport 1
+https://p11.magicplaces.eu/hitmusic/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=a33665cfe0f0a4ebdd8e294b334f18ac1c982f05-9e139dbfc925ceeef52f0ce4155659c7-1742080828-1742070028
+#EXTINF:0 type="stream" channelId="32" group="Sports", DigiSport 2
+https://p11.magicplaces.eu/mezzo/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=913c2bd631aaafadab063cd3063e7a82f75398c9-ea77c2baf70b090a5d187fd4f3f7c1a3-1742080844-1742070044
+#EXTINF:0 type="stream" channelId="33" group="Sports", DigiSport 3
+https://p11.magicplaces.eu/magictv/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=ab7471400610e14f8d541b337d00221c2b93f70d-cfb03008df3eab119e1adf7b809b3a02-1742080860-1742070060
+#EXTINF:0 type="stream" channelId="34" group="Sports", DigiSport 4
+https://p11.magicplaces.eu/tvrfolclor/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=c4d335bb16e9969c8f9cd1d7552805fed56576cb-afb132ac1819dfbcd2cf33f54a80fd38-1742080875-1742070075
+#EXTINF:0 type="stream" channelId="35" group="Sports", TVR Sport
+https://p11.magicplaces.eu/balkanmusicsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=c4ff728c5c08ad1421943c168f3cee6b20532036-39f5fb0ee1f9574854e7b80aeb3981fe-1742080891-1742070091
+#EXTINF:0 type="stream" channelId="36" group="Sports", Sport Extra
+https://p11.magicplaces.eu/zutvsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=81dfd352416ecbdc92b8ad8dfb107369e52fe346-87ab6592905c6fa9ab0a425b0e29cc5b-1742080907-1742070107
+#EXTINF:0 type="stream" channelId="37" group="Sports", EuroSport 1
+https://p11.magicplaces.eu/mtveuropesd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=72bf3d25e9503f230258042873c62681674c03bf-c8f5febbbb3568d28647643b7c48403a-1742080923-1742070123
+#EXTINF:0 type="stream" channelId="38" group="Sports", EuroSport 2
+https://p11.magicplaces.eu/mtv00sd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=e72411cccc6b3b36da02076dca704087223f689e-53e5d7323a38fbabf8cb503bb0e20d4f-1742080938-1742070138
+#EXTINF:0 type="stream" channelId="39" group="Sports", Pro Arena
+https://p11.magicplaces.eu/partymixsd/tracks-v1a1/mono.m3u8?remote=no_check_ip&token=2e2582d22c65ec7effec2616f47c5d8e0fb7e222-9483e9656499fd6af6e82a6678427b82-1742080954-1742070154

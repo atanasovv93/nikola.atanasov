@@ -1,0 +1,287 @@
+[
+    {
+        "name": "HBO 1",
+        "url": "https://rds.live/hbo-hd-1/",
+        "category": "Movies"
+    },
+    {
+        "name": "HBO 2",
+        "url": "https://rds.live/hbo-2-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "HBO 3",
+        "url": "https://rds.live/hbo-3-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "SkyShowTime 1",
+        "url": "https://rds.live/skyshowtime-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "SkyShowTime 2",
+        "url": "https://rds.live/skyshowtime-2-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "Cinemax 1",
+        "url": "https://rds.live/cinemax-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "Cinemax 2",
+        "url": "https://rds.live/cinemax-2/",
+        "category": "Movies"
+    },
+    {
+        "name": "BBC First",
+        "url": "https://rds.live/bbc-first-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "AMC",
+        "url": "https://rds.live/amc/",
+        "category": "Movies"
+    },
+    {
+        "name": "FilmNow",
+        "url": "https://rds.live/film-now-ro1/",
+        "category": "Movies"
+    },
+    {
+        "name": "DIVA",
+        "url": "https://rds.live/diva/",
+        "category": "Movies"
+    },
+    {
+        "name": "FilmBox",
+        "url": "https://rds.live/filmbox/",
+        "category": "Movies"
+    },
+    {
+        "name": "Filmbox Premium",
+        "url": "https://rds.live/filmbox-premium/",
+        "category": "Movies"
+    },
+    {
+        "name": "TV1000",
+        "url": "https://rds.live/tv-1000/",
+        "category": "Movies"
+    },
+    {
+        "name": "AXN",
+        "url": "https://rds.live/axn/",
+        "category": "Movies"
+    },
+    {
+        "name": "AXN White",
+        "url": "https://rds.live/axn-white/",
+        "category": "Movies"
+    },
+    {
+        "name": "AXN Black",
+        "url": "https://rds.live/axn-black/",
+        "category": "Movies"
+    },
+    {
+        "name": "AXN Spin",
+        "url": "https://rds.live/axn-spin/",
+        "category": "Movies"
+    },
+    {
+        "name": "Epic Drama",
+        "url": "https://rds.live/epicdrama/",
+        "category": "Movies"
+    },
+    {
+        "name": "Comedy Central",
+        "url": "https://rds.live/comedy-central/",
+        "category": "Movies"
+    },
+    {
+        "name": "Pro Cinema",
+        "url": "https://rds.live/pro-cinema-1/",
+        "category": "Movies"
+    },
+    {
+        "name": "Cinemaraton",
+        "url": "https://rds.live/cinemaraton-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "BollyWood TV",
+        "url": "https://rds.live/bollywood-tv/",
+        "category": "Movies"
+    },
+    {
+        "name": "BollyWood Classic",
+        "url": "https://rds.live/bollywood-clasic-hd/",
+        "category": "Movies"
+    },
+    {
+        "name": "Warner TV",
+        "url": "https://rds.live/warner-tv/",
+        "category": "Movies"
+    },
+    {
+        "name": "Prima Comedy",
+        "url": "https://rds.live/prima-comedy/",
+        "category": "Movies"
+    },
+    {
+        "name": "Film-Café",
+        "url": "https://rds.live/film-cafe/",
+        "category": "Movies"
+    },
+    {
+        "name": "PrimarSport 1",
+        "url": "https://rds.live/primasport-1hd-ro2/",
+        "category": "Sports"
+    },
+    {
+        "name": "PrimarSport 2",
+        "url": "https://rds.live/primasport-2-hd-ro1/",
+        "category": "Sports"
+    },
+    {
+        "name": "PrimarSport 3",
+        "url": "https://rds.live/primasport-3-hd-ro1/",
+        "category": "Sports"
+    },
+    {
+        "name": "DigiSport 1",
+        "url": "https://rds.live/digisport/",
+        "category": "Sports"
+    },
+    {
+        "name": "DigiSport 2",
+        "url": "https://rds.live/digisport-2-hd-ro3/",
+        "category": "Sports"
+    },
+    {
+        "name": "DigiSport 3",
+        "url": "https://rds.live/digisport-3-hd-ro3/",
+        "category": "Sports"
+    },
+    {
+        "name": "DigiSport 4",
+        "url": "https://rds.live/digisport-4-hd-ro3/",
+        "category": "Sports"
+    },
+    {
+        "name": "TVR Sport",
+        "url": "https://rds.live/tvr-sport/",
+        "category": "Sports"
+    },
+    {
+        "name": "Sport Extra",
+        "url": "https://rds.live/sportextra-hd/",
+        "category": "Sports"
+    },
+    {
+        "name": "EuroSport 1",
+        "url": "https://rds.live/eurosport-1-hd-c1/",
+        "category": "Sports"
+    },
+    {
+        "name": "EuroSport 2",
+        "url": "https://rds.live/eurosport-2-hd-1/",
+        "category": "Sports"
+    },
+    {
+        "name": "Pro Arena",
+        "url": "https://rds.live/pro-arena-hd-2/",
+        "category": "Sports"
+    },
+    {
+        "name": "U TV",
+        "url": "https://rds.live/u-tv/",
+        "category": "Music"
+    },
+    {
+        "name": "Kiss TV",
+        "url": "https://rds.live/kiss-tv/",
+        "category": "Music"
+    },
+    {
+        "name": "Atomic",
+        "url": "https://rds.live/atomic/",
+        "category": "Music"
+    },
+    {
+        "name": "Hit Music Channel",
+        "url": "https://rds.live/hit-music-channel-2/",
+        "category": "Music"
+    },
+    {
+        "name": "Mezzo",
+        "url": "https://rds.live/mezzo-ro/",
+        "category": "Music"
+    },
+    {
+        "name": "Magic TV",
+        "url": "https://rds.live/magic-tv/",
+        "category": "Music"
+    },
+    {
+        "name": "Tv Folclor",
+        "url": "https://rds.live/tvr-folclor-hd/",
+        "category": "Music"
+    },
+    {
+        "name": "Balcan Music",
+        "url": "https://rds.live/balcan-music-tv/",
+        "category": "Music"
+    },
+    {
+        "name": "ZU TV",
+        "url": "https://rds.live/zu-tv/",
+        "category": "Music"
+    },
+    {
+        "name": "MTV",
+        "url": "https://rds.live/mtv/",
+        "category": "Music"
+    },
+    {
+        "name": "MTV 80's",
+        "url": "https://rds.live/mtv-80s/",
+        "category": "Music"
+    },
+    {
+        "name": "Party Mix",
+        "url": "https://rds.live/party-mix/",
+        "category": "Music"
+    },
+    {
+        "name": "MRT 1",
+        "url": "https://tvstanici.net/mrt-1-zivo/",
+        "category": "MKD"
+    },
+    {
+        "name": "Sitel TV",
+        "url": "https://tvstanici.net/sitel-vo-zivo/",
+        "category": "MKD"
+    },
+    {
+        "name": "Kanal 5",
+        "url": "https://tvstanici.net/kanal5-vo-zivo/",
+        "category": "MKD"
+    },
+    {
+        "name": "Telma TV",
+        "url": "https://tvstanici.net/telma-vo-zivo/",
+        "category": "MKD"
+    },
+    {
+        "name": "Alfa TV",
+        "url": " https://tvstanici.net/alfa-vo-zivo/",
+        "category": "MKD"
+    },
+    {
+        "name": "24 Vesti",
+        "url": "https://tvstanici.net/24-vesti-vo-zivo/",
+        "category": "MKD"
+    }
+]
