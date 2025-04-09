@@ -55,13 +55,27 @@ app.get('/books/:id', async (req, res) => {
 // POST /books - Add a new book
 app.post('/books', async (req, res) => {
   const { title, author, year } = req.body;
+
+  // validate Input data
+  if (!title || typeof title !== 'string' || title.trim() === '') {
+    return res.status(400).json({ error: 'Title is required and must be a non-empty string.' });
+  }
+
+  if (!author || typeof author !== 'string' || author.trim() === '') {
+    return res.status(400).json({ error: 'Author is required and must be a non-empty string.' });
+  }
+
+  if (!year || typeof year !== 'number' || year < 0) {
+    return res.status(400).json({ error: 'Year is required and must be a positive number.' });
+  }
+
   let books = await fs.readFile(BOOKS_FILE_PATH, 'utf-8');
   books = JSON.parse(books);
 
   const newBook = {
     id: books.length + 1,
-    title,
-    author,
+    title: title.trim(),
+    author: author.trim(),
     year
   };
 

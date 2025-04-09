@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "bb29e2f2-1bdc-4537-b53b-e565e9ef7b7f",
+		"name": "NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38694773",
+		"_collection_link": "https://www.postman.com/api-testing-8868/workspace/406b692f-0ade-4042-ae8c-8c027d494247/collection/38694773-bb29e2f2-1bdc-4537-b53b-e565e9ef7b7f?action=share&source=collection_link&creator=38694773"
+	},
+	"item": [
+		{
+			"name": "Class",
+			"item": [
+				{
+					"name": "Class07 Databases MongoDB",
+					"item": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HomeWork",
+			"item": [
+				{
+					"name": "Class05 HomeWork",
+					"item": [
+						{
+							"name": "Get All Books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Books By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST New Book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Brave New World\",\r\n  \"author\": \"Aldous Huxley\",\r\n  \"year\": 1932\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Book By ID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Books by Author Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books?author=Aldous",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "author",
+											"value": "Aldous"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Books by Year",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books?year=1925",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "1925"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Statistics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/stats",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"stats"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Class06 HomeWork",
+					"item": [
+						{
+							"name": "Get All Books",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Class08 HomeWork",
+					"item": [
+						{
+							"name": "GET All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Pasta\",\r\n  \"ingredients\": [\"Pasta\", \"Tomato Sauce\", \"Cheese\"],\r\n  \"instructions\": \"Boil pasta and add sauce.\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/recipes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /recipes",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Musaka\",\r\n  \"description\": \"Traditional Balkan dish\",\r\n  \"ingredients\": [\"potatoes\", \"minced meat\", \"onion\", \"eggs\", \"milk\"],\r\n  \"instructions\": [\"Slice potatoes\", \"Cook meat\", \"Layer and bake\"],\r\n  \"cookingTime\": 60,\r\n  \"difficulty\": \"medium\",\r\n  \"isVegetarian\": false,\r\n  \"category\": \"dinner\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/recipes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/recipes/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67f66fca2a0ac512e0340567"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /recipes/:id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Updated Musaka\",\r\n  \"description\": \"Improved Balkan dish\",\r\n  \"ingredients\": [\"potatoes\", \"minced meat\", \"onion\", \"cream\"],\r\n  \"instructions\": [\"Slice potatoes\", \"Cook meat\", \"Layer and bake with cream\"],\r\n  \"cookingTime\": 55,\r\n  \"difficulty\": \"easy\",\r\n  \"isVegetarian\": false,\r\n  \"category\": \"dinner\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/recipes/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67f66fca2a0ac512e0340567"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE /recipes/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/recipes/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67f66fca2a0ac512e0340567"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /recipes/category/dinner",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/recipes/search/title?title=Musaka",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes",
+										"search",
+										"title"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "Musaka"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /recipes/category/dinner",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/recipes/category/dinner",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"recipes",
+										"category",
+										"dinner"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

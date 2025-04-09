@@ -11,6 +11,7 @@ class Counter extends EventEmitter {
 
     increase() {
         if (this.value < this.max) {
+            if (this.value === -1) this.emit('zero'); 
             this.value++;
             this.stats.increases++;
             this.emit('increase', this.value);
@@ -22,6 +23,7 @@ class Counter extends EventEmitter {
 
     decrease() {
         if (this.value > this.min) {
+            if (this.value === 1) this.emit('zero'); 
             this.value--;
             this.stats.decreases++;
             this.emit('decrease', this.value);
@@ -39,7 +41,6 @@ class Counter extends EventEmitter {
     }
 
     _checkThresholds() {
-        if (this.value === 0) this.emit('zero');
         if (this.value > 0) this.emit('positive', this.value);
         if (this.value < 0) this.emit('negative', this.value);
     }
@@ -63,8 +64,9 @@ counter.on('reset', () => console.log('Counter has been reset.'));
 counter.on('stats', stats => console.log('Counter stats:', stats));
 
 // Demonstration
-counter.increase();
-counter.increase();
-counter.decrease();
-counter.reset();
+counter.decrease(); // -1
+counter.increase(); // 0 (zero event), then 1 (positive event)
+counter.increase(); // 2 (positive event)
+counter.decrease(); // 1 (positive event)
+counter.decrease(); // 0 (zero event), then -1 (negative event)
 counter.getStats();
