@@ -127,21 +127,21 @@
     },
     {
         "id": 132,
-        "name": "Cinemaraton",
-        "url": "https://rds.live/cinemaraton-hd/",
-        "category": "Филм"
+        "name": "Cartoon Network",
+        "url": "https://rds.live/cartoon-network/",
+        "category": "Детски"
     },
     {
         "id": 133,
-        "name": "BollyWood TV",
-        "url": "https://rds.live/bollywood-tv/",
-        "category": "Филм"
+        "name": "Jim Jam",
+        "url": "https://rds.live/jim-jam/",
+        "category": "Детски"
     },
     {
         "id": 134,
-        "name": "BollyWood Classic",
-        "url": "https://rds.live/bollywood-clasic-hd/",
-        "category": "Филм"
+        "name": "Disney Junior",
+        "url": "https://rds.live/disney-junior/",
+        "category": "Детски"
     },
     {
         "id": 135,
@@ -308,16 +308,128 @@
     },
     {
         "id": 162,
-        "name": "Cartoon Network",
-        "url": "https://rds.live/cartoon-network/",
-        "category": "Детски"
-
+        "name": "History Channel",
+        "url": "https://rds.live/history-channel/",
+        "category": "Документарни"
     },
     {
         "id": 163,
-        "name": "Jim Jam",
-        "url": "https://rds.live/jim-jam/",
+        "name": "Viasat Nature",
+        "url": "https://rds.live/viasat-nature/",
+        "category": "Документарни"
+    },
+    {
+        "id": 164,
+        "name": "Viasat History",
+        "url": "https://rds.live/viasat-history/",
+        "category": "Документарни"
+    },
+    {
+        "id": 165,
+        "name": "Viasat Explorer",
+        "url": "https://rds.live/viasat-explore/",
+        "category": "Документарни"
+    },
+    {
+        "id": 166,
+        "name": "DaVinci",
+        "url": "https://rds.live/davinci/",
+        "category": "Документарни"
+    },
+    {
+        "id": 167,
+        "name": "Discovery Channel",
+        "url": "https://rds.live/discovery-channel/",
+        "category": "Документарни"
+    },
+    {
+        "id": 168,
+        "name": "National Geographic",
+        "url": "https://rds.live/national-geographic/",
+        "category": "Документарни"
+    },
+    {
+        "id": 169,
+        "name": "National Geographic Wild",
+        "url": "https://rds.live/national-geographic-wild/",
+        "category": "Документарни"
+    },
+    {
+        "id": 170,
+        "name": "National Geographic People",
+        "url": "https://rds.live/national-geographic-people/",
+        "category": "Документарни"
+    },
+    {
+        "id": 171,
+        "name": "Pro TV",
+        "url": "https://rds.live/pro-tv-hd-8/",
+        "category": "Романски"
+    },
+    {
+        "id": 172,
+        "name": "Antena 1",
+        "url": "https://rds.live/antena-1-22/",
+        "category": "Романски"
+    },
+    {
+        "id": 173,
+        "name": "Kanal D",
+        "url": "https://rds.live/kanal-d-ro-3/",
+        "category": "Романски"
+    },
+    {
+        "id": 174,
+        "name": "Prima TV",
+        "url": "https://rds.live/prima-tv-hd/",
+        "category": "Романски"
+    },
+    {
+        "id": 175,
+        "name": "TVR 1",
+        "url": "https://rds.live/tvr-1-hd/",
+        "category": "Романски"
+    },
+    {
+        "id": 176,
+        "name": "NCN",
+        "url": "https://rds.live/ncn/",
+        "category": "Романски"
+    },
+    {
+        "id": 177,
+        "name": "Nickelodeon ",
+        "url": "https://rds.live/nickelodeon/",
+        "category": "Детски"
+    },
+    {
+        "id": 178,
+        "name": "Boomerang ",
+        "url": "https://rds.live/boomerang/",
+        "category": "Детски"
+    },
+    {
+        "id": 179,
+        "name": "Minimax",
+        "url": "https://rds.live/minimax/",
+        "category": "Детски"
+    },
+    {
+        "id": 180,
+        "name": "Nick Jr.",
+        "url": "https://rds.live/nick-jr/",
+        "category": "Детски"
+    },
+    {
+        "id": 181,
+        "name": "Duck TV",
+        "url": "https://rds.live/duck-tv/",
+        "category": "Детски"
+    },
+    {
+        "id": 173,
+        "name": "Disney Channel",
+        "url": "https://rds.live/disney-channel/",
         "category": "Детски"
     }
-    
 ]
