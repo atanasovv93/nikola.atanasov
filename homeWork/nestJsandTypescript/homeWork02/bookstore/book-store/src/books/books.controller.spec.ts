@@ -22,11 +22,12 @@ describe('BookController', () => {
   });
 
   it('should return a book by id', () => {
-    const book = controller.getOneByParam(':id')
-
+    const book = controller.getOneByParam('1'); 
+  
     expect(book).toBeDefined();
-    expect(book?.id).toBe(1);
+    expect(book.id).toBe(1);
   });
+  
 
   it('should filter books by author', () => {
     const result = controller.getAll(undefined, 'nika');
