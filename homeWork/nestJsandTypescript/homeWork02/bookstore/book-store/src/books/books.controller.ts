@@ -18,12 +18,15 @@ export class BookController {
 
   @Get()
   getAll(
-    @Query('minPrice') minPrice?: number,
+    @Query('minPrice') minPrice?: string,
     @Query('author') author?: string,
-    @Query('title') title?: string,
-    @Query('id') _id?: string
+    @Query('title') title?: string
   ): Book[] {
     let result = this.books;
+
+    if (minPrice && isNaN(+minPrice)) {
+      throw new HttpException('minPrice must be a number', HttpStatus.BAD_REQUEST);
+    }
 
     if (minPrice) {
       result = result.filter(book => book.price >= +minPrice);
@@ -34,9 +37,9 @@ export class BookController {
     }
 
     if (title) {
-        result = result.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
-      }
-  
+      result = result.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
+    }
+
     return result;
   }
 
@@ -44,24 +47,31 @@ export class BookController {
   getOneByParam(@Param('id') id: string): Book {
     const numericId = Number(id);
     const book = this.books.find(book => book.id === numericId);
-  
+
     if (!book) {
       throw new HttpException('Book not found', HttpStatus.NOT_FOUND);
     }
-  
+
     return book;
   }
-  
+
   @Post()
   @HttpCode(201)
   create(@Body() book: Book): { message: string, book: Book } {
+    const requiredFields = ['id', 'title', 'author', 'price'];
+    for (const field of requiredFields) {
+      if (!book[field]) {
+        throw new HttpException(`Missing required field: ${field}`, HttpStatus.BAD_REQUEST);
+      }
+    }
+
     this.books.push(book);
     return { message: 'Book created successfully', book };
   }
 
   @Put(':id')
   update(@Param('id') id: number, @Body() book: Book): { message: string, book?: Book } {
-    const index = this.books.findIndex(b => b.id === +id);
+    const index = this.books.findIndex(b => b.id === id);
     if (index !== -1) {
       this.books[index] = book;
       return { message: 'Book updated successfully', book };
@@ -73,14 +83,14 @@ export class BookController {
   @HttpCode(200)
   remove(@Param('id') id: string): { message: string } {
     const initialLength = this.books.length;
-  
+
     this.books = this.books.filter(book => book.id !== +id);
-  
+
     if (this.books.length === initialLength) {
       throw new HttpException('Book not found', HttpStatus.NOT_FOUND);
     }
-  
+
     return { message: 'Book deleted successfully' };
   }
-  
+
 }
