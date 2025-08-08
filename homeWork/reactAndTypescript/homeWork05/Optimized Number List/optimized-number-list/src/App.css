@@ -1,0 +1,68 @@
+/* Центрирање и основен изглед */
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reset {
+  margin-bottom: 1rem;
+  background-color: rgb(161, 161, 168);
+}
+
+/* Елемент за секој број */
+.number-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Основен стил за копчињата */
+button {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+/* Зелено копче за Increment */
+.increment {
+  background-color: #4caf50;
+  color: white;
+}
+
+.increment:hover {
+  background-color: #43a047;
+}
+
+/* Црвено копче за Decrement */
+.decrement {
+  background-color: #f44336;
+  color: white;
+}
+
+.decrement:hover {
+  background-color: #e53935;
+}
+
+/* Оневозможено копче */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Сумата погоре */
+.sum {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

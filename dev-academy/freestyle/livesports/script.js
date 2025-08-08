@@ -1,5 +1,5 @@
 // URL на API-то
-const apiUrl = "https://varline.store/api/matchlist";
+const apiUrl = "";
 
 // Функција за добивање и прикажување на натпреварите
 async function fetchMatches() {
