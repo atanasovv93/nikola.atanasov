@@ -1,7 +1,7 @@
-import Header from './components/Header';
-import BookList from './components/BookList';
-import Footer from './components/Footer';
-import Counter from './components/Counter';
+import Header from './components/Header/Header';
+import BookList from './components/BookList/BookList';
+import Footer from './components/Footer/Footer';
+import Counter from './components/Counter/Counter';
 
 function App() {
   const username = 'Goran';
