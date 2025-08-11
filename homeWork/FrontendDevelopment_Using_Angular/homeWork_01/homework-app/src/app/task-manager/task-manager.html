@@ -1,0 +1,54 @@
+<div class="task-manager">
+  <h2>Task Manager</h2>
+
+  <div class="controls">
+    <input
+      placeholder="Write new task..."
+      [value]="newTask()"
+      (input)="newTask.set($any($event.target).value)"
+      (keydown.enter)="addTask()"
+    />
+    <button (click)="addTask()">Add</button>
+    <button (click)="clearAll()" [disabled]="tasks().length === 0">Delete all tasks</button>
+  </div>
+
+  <div *ngIf="error()" class="error">{{ error() }}</div>
+
+  <div class="stats">
+    <strong>Total:</strong> {{ tasks().length }}
+    — <strong>Finished:</strong> {{ completedCount() }}
+    — <strong>Pending:</strong> {{ pendingCount() }}
+  </div>
+
+  <ul class="task-list">
+    <li *ngFor="let t of tasks()">
+      <label>
+        <input type="checkbox" [checked]="t.completed" (change)="toggleCompleted(t.id)" />
+        <span *ngIf="editingTaskId !== t.id" [class.completed]="t.completed">{{ t.title }}</span>
+        <input
+          *ngIf="editingTaskId === t.id"
+          type="text"
+          [value]="editTitle"
+          (input)="editTitle = $any($event.target).value"
+          (keydown.enter)="saveEdit(t.id)"
+          (keydown.escape)="cancelEdit()"
+          autofocus
+        />
+      </label>
+      <small class="time">{{ t.updatedAt | date:'short' }}</small>
+
+      <button *ngIf="editingTaskId !== t.id" (click)="startEdit(t)" title="Edit task">✏️</button>
+      <button *ngIf="editingTaskId === t.id" (click)="saveEdit(t.id)" title="Save task">✅</button>
+      <button *ngIf="editingTaskId === t.id" (click)="cancelEdit()" title="Cancel editing">❌</button>
+
+      <button (click)="deleteTask(t.id)" title="Delete task">🗑️</button>
+    </li>
+  </ul>
+
+  <section class="logs">
+    <h3>Log</h3>
+    <ul>
+      <li *ngFor="let l of logs()">{{ l.time }} — {{ l.message }}</li>
+    </ul>
+  </section>
+</div>
