@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+textarea {
+  width: 100%;             // да го пополни целиот простор на формата
+  min-height: 100px;       // основна висина
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;  // светло сива рамка
+  border-radius: 5px;
+  resize: vertical;        // дозволува само вертикално менување
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #4caf50;   // зелена рамка кога е фокус
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+

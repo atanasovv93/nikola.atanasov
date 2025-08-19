@@ -1,0 +1,30 @@
+<h2>Todo List</h2>
+
+<input placeholder="Search todos..."
+       [ngModel]="search()"
+       (ngModelChange)="search.set($event)" />
+
+<button routerLink="/create" class="add-todo-button">Add new todo</button>
+
+<div class="todo-list-container">
+  <div *ngFor="let todo of filteredTodos"
+       [ngClass]="todo.status"
+       class="todo-card">
+       
+    <h3 [class.completed]="todo.status === 'completed'">{{ todo.title }}</h3>
+    <p>{{ todo.description }}</p>
+
+    <p *ngIf="todo.dueDate" class="due-date">
+      Due: {{ todo.dueDate | date:'mediumDate' }}
+    </p>
+
+    <div class="actions">
+      <select [value]="todo.status" (change)="updateStatus(todo.id, $any($event.target).value)">
+        <option value="pending">Pending</option>
+        <option value="in-progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+      <button (click)="delete(todo.id)">Delete</button>
+    </div>
+  </div>
+</div>
